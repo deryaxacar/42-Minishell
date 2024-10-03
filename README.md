@@ -62,3 +62,7 @@ Projeye katkıda bulunmak veya geri bildirim sağlamak isterseniz, aşağıdaki 
 ## Lisans 📜
 
 Bu proje MIT Lisansı ile lisanslanmıştır. Proje kodunu özgürce kullanabilir, değiştirebilir ve dağıtabilirsiniz. Lisans şartları hakkında daha fazla bilgi için `LICENSE` dosyasını inceleyin.
+
+---
+
+Bu README dosyası Derya ACAR tarafından hazırlanmıştır.
