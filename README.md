@@ -65,5 +65,5 @@ Bu proje MIT Lisansı ile lisanslanmıştır. Proje kodunu özgürce kullanabili
 
 ---
 
-<p align="center">© 2025 This project was created by Derya ACAR.</p>
+<p align="center">2025 This project was created by Derya ACAR.</p>
 
