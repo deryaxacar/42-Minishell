@@ -1,67 +1,67 @@
-<!-- Proje Başlığı ve Açıklama -->
+<!-- Project Title and Description -->
 <h1 align="center">42 - Minishell ⌨️</h1>
 
 <p align="center">
-Bu proje, temel bir komut satırı kabuğu (shell) oluşturmayı amaçlar. Kabuk, kullanıcı girdilerini işleyerek komutları çalıştırır, dosya yönlendirmesi ve boru (pipe) işlemleri yapar. Minishell, temel kabuk işlevlerini yerine getirerek kabuğun nasıl çalıştığını anlamak için harika bir araçtır.
+This project aims to build a basic command-line shell. The shell processes user input, executes commands, handles file redirection, and manages pipes. Minishell is a great tool for understanding how a shell works by implementing core shell functionalities.
 </p>
 
-<!-- Proje Logosu veya Görseli -->
+<!-- Project Logo or Image -->
 <p align="center">
-  <a target="blank"><img src="https://i.hizliresim.com/sx4d620.png" height="150" width="150" /></a>
+  <a target="blank"><img src="https://github.com/deryaxacar/42-Minishell/blob/main/minishell.png" height="150" width="150" /></a>
 </p>
 
-## Projenin Amacı 🎯
+## Project Goal 🎯
 
-Minishell projesi, basit bir UNIX benzeri kabuk oluşturmayı hedefler. Kullanıcı girdilerini alma ve analiz etme, komutları çalıştırma, dosya yönlendirmesi ve boru işlemleri gibi temel kabuk işlevlerini içerir. Bu proje, C dilinde sistem çağrıları, bellek yönetimi ve dize işlemleri gibi konularda derinlemesine bilgi edinmeyi amaçlar.
+The goal of the Minishell project is to create a simple UNIX-like shell. It involves handling user input, parsing and executing commands, implementing file redirection and pipe operations. This project provides in-depth knowledge on system calls, memory management, and string manipulation in the C programming language.
 
-## Kullanım Senaryoları 🖥️
+## Usage Scenarios 🖥️
 
-Minishell, standart kabuğa benzer şekilde çalışır ve çeşitli işlevleri destekler. Bazı kullanım örnekleri şunlardır:
+Minishell operates similarly to a standard shell and supports various functionalities. Here are some usage examples:
 
-- **Komut Çalıştırma**: Basit komutları çalıştırmak için yazın ve Enter tuşuna basın.
-  - Örnek: `ls -l`
-- **Dosya Yönlendirmesi**: Çıktıyı bir dosyaya yönlendirmek için '>' veya '>>', girdiyi bir dosyadan almak için '<' kullanın.
-  - Örnek: `echo "Merhaba Dünya" > output.txt`
-- **Boru (Pipe) İşlemleri**: Bir komuttan gelen çıktıyı başka bir komuta yönlendirmek için '|' kullanın.
-  - Örnek: `ls -l | grep minishell`
-- **Komut Sonuçlarını Kontrol Etme**: '$?' ifadesi, son çalıştırılan komutun çıkış durumunu gösterir.
-  - Örnek: `ls -l; echo $?` (Bu, son komutun başarılı olup olmadığını kontrol eder.)
-- **Arka Plan İşlemleri**: Bir komutu arka planda çalıştırmak için '&' kullanın.
-  - Örnek: `./script.sh &`
+- **Command Execution**: Type simple commands and press Enter.
+  - Example: `ls -l`
+- **File Redirection**: Use '>' or '>>' to redirect output to a file, and '<' to read input from a file.
+  - Example: `echo "Hello World" > output.txt`
+- **Pipe Operations**: Use '|' to pass the output of one command as input to another.
+  - Example: `ls -l | grep minishell`
+- **Check Command Result**: `$?` returns the exit status of the last executed command.
+  - Example: `ls -l; echo $?` (Checks if the last command succeeded.)
+- **Background Processes**: Use '&' to run a command in the background.
+  - Example: `./script.sh &`
 
-## Gereksinimler 📋
+## Requirements 📋
 
-Minishell projesini çalıştırmak ve geliştirmek için aşağıdaki gereksinimlerin sağlanması gerekir:
+To build and run the Minishell project, the following requirements must be met:
 
-- **Unix tabanlı bir işletim sistemi** (Linux, macOS) veya bir terminal emülatörü.
-- **GCC derleyici**: Projeyi derlemek için GNU C Compiler kullanmanız gerekmektedir.
-- **Bash veya benzeri bir kabuk**: Projenin test edilmesi ve komutların çalıştırılması için kullanılacaktır.
-- **C Kütüphaneleri**: Projenin işleyişi için gerekli olan standart C kütüphaneleri ve sistem çağrılarına erişim.
-- **Make aracı**: Projeyi derlemek ve yönetmek için Makefile kullanılacaktır.
+- **A Unix-based operating system** (Linux, macOS) or a terminal emulator.
+- **GCC compiler**: The project should be compiled with the GNU C Compiler.
+- **Bash or a similar shell**: For testing and executing commands.
+- **C libraries**: Access to standard C libraries and system calls is required.
+- **Make utility**: A Makefile is used to build and manage the project.
 
-## Proje İçeriği 📁
+## Project Structure 📁
 
-Proje, ana minishell işlevinin yanı sıra çeşitli yardımcı fonksiyonlar ve yapıları içerir. İşte ana bileşenler:
+In addition to the main shell functionality, the project includes various helper functions and structures. Key components include:
 
-- **Makefile**: Projeyi derlemek için kullanılan derleme dosyası.
-- **minishell.h**: Proje için başlık dosyası, çeşitli yapı tanımları ve fonksiyon prototiplerini içerir.
-- **minishell.c**: Ana kabuk işlevinin bulunduğu dosya.
-- **executor.c**: Komutların yürütülmesi ve yönlendirme işlemlerini ele alan dosya.
-- **parser.c**: Kullanıcı girdisini analiz eden ve komutları işleyen dosya.
-- **signals.c**: Sinyal işleme ve kontrol işlemlerini yöneten dosya.
-- **utils.c**: Yardımcı fonksiyonları içeren dosya, dize işlemleri ve bellek yönetimi gibi konuları kapsar.
+- **Makefile**: Used to compile and build the project.
+- **minishell.h**: Header file containing structure definitions and function prototypes.
+- **minishell.c**: Contains the core shell logic.
+- **executor.c**: Handles command execution and redirection operations.
+- **parser.c**: Parses user input and processes commands.
+- **signals.c**: Manages signal handling and control logic.
+- **utils.c**: Includes helper functions for string manipulation and memory management.
 
-## Katkıda Bulunma ve Geri Bildirim 🤝
+## Contributing and Feedback 🤝
 
-Projeye katkıda bulunmak veya geri bildirim sağlamak isterseniz, aşağıdaki adımları takip edin:
+If you'd like to contribute or provide feedback:
 
-1. Proje deposunu forklayın.
-2. Değişikliklerinizi yapın ve bir "pull request" gönderin.
-3. Geri bildirim için GitHub üzerinden bir "issue" açın veya tartışmalara katılın.
+1. Fork the repository.
+2. Make your changes and submit a pull request.
+3. Open an issue on GitHub or join the discussion for suggestions and improvements.
 
-## Lisans 📜
+## License 📜
 
-Bu proje MIT Lisansı ile lisanslanmıştır. Proje kodunu özgürce kullanabilir, değiştirebilir ve dağıtabilirsiniz. Lisans şartları hakkında daha fazla bilgi için `LICENSE` dosyasını inceleyin.
+This project is licensed under the MIT License. You are free to use, modify, and distribute the code. For detailed license terms, please refer to the `LICENSE` file.
 
 ---
 
